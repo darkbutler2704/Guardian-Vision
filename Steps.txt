@@ -1,0 +1,43 @@
+# Create virtual environment named 'yoloenv' (Place it in a document including the py)
+python -m venv yoloenv
+
+# Activate the environment (Windows)
+yoloenv\Scripts\activate
+
+#If doensn't work, you need to bypass execution policy
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+#then add bat
+yoloenv\Scripts\activate.bat
+
+# Activate the environment 
+source yoloenv/bin/activate
+
+
+#Install pips
+pip install --upgrade pip
+pip install opencv-python
+
+#optional
+pip install opencv-contrib-python
+
+#torchid
+#for cpu only
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+#for gpu
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+#yolov8
+pip install ultralytics
+
+#torchreid
+pip install torchreid
+pip install git+https://github.com/KaiyangZhou/deep-person-reid.git
+
+#for results
+pip install scipy matplotlib
+
+#For multiple camera (example 2 phones, it needs obs studio virtualcam) also the plugins of obs virtualcam to start virtualcam
+
+#To run code example file code testing.py, type this in terminal
+python testing.py 
